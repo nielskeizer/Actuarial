@@ -1,0 +1,39 @@
+﻿@inherits LayoutComponentBase
+
+<MatAnchorUtils></MatAnchorUtils>
+<MatAppBar Style="z-index: 100;" Class="mat">
+    <MatAppBarRow>
+        <MatAppBarSection>
+            <MatIconButton Icon="menu" OnClick="@((e) => MenuButtonClicked())"></MatIconButton>
+            <MatAppBarTitle>Actuarial Calculations</MatAppBarTitle>
+        </MatAppBarSection>
+        <MatAppBarSection Align="@MatAppBarSectionAlign.End">
+            <MatIconButton Link="https://github.com/nielskeizer/Actuarial" Target="_blank">
+                <img src="GitHub-Mark-Light-32px.png">
+            </MatIconButton>
+        </MatAppBarSection>
+    </MatAppBarRow>
+</MatAppBar>
+
+<MatDrawerContainer Style="width: 100vw; height: 100vh;" Class="mat">
+    <MatDrawer @bind-Opened="@navMenuIsOpen">
+        <MatAppBarAdjust></MatAppBarAdjust>
+        <NavMenu></NavMenu>
+    </MatDrawer>
+    <MatDrawerContent Class="mdc-theme--background">
+        <MatAppBarAdjust></MatAppBarAdjust>
+        <div class="body-wrapper">
+            @Body
+        </div>
+    </MatDrawerContent>
+</MatDrawerContainer>
+
+@code {
+    bool navMenuIsOpen = true;
+
+    void MenuButtonClicked()
+    {
+        navMenuIsOpen = !navMenuIsOpen;
+        this.StateHasChanged();
+    }
+}

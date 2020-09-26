@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components;
+@inject NavigationManager navigationManager
+
+<MatNavMenu Multi="true">
+    <MatNavItem Href="@navigationManager.ToAbsoluteUri(" ").AbsoluteUri" NavLinkMatch="NavLinkMatch.All">
+        <MatIcon>home</MatIcon> <span class="miniHover">Home</span>
+    </MatNavItem>
+
+    <MatNavItem Href="@navigationManager.ToAbsoluteUri("calculations").AbsoluteUri">
+        <MatIcon>subject</MatIcon> <span class="miniHover">Calculations</span>
+    </MatNavItem>
+</MatNavMenu>
