@@ -2,9 +2,24 @@
 
 <MatTabGroup>
     <MatTab Label="Annuity 1">
-        The output of a calculation wil be shown in a tab.a
+        The output of a calculation wil be shown in a tab.
         This tab will open when a new calculation result is received from the server.
         It will have aclose button as well.
     </MatTab>
 </MatTabGroup>
-<MatFAB Icon="@MatIconNames.Add_circle" Label="New"></MatFAB>
+<MatCard @ref="NewCard">
+    <MatCardContent>
+
+    </MatCardContent>
+</MatCard>
+<MatFAB Icon="@MatIconNames.Add_circle" Label="New" OnClick="@OnClickNew" @ref="NewButton"></MatFAB>
+
+@code {
+
+    MatFAB NewButton;
+    MatCard NewCard;
+    void OnClickNew(MouseEventArgs e)
+    {
+        
+    }
+}
