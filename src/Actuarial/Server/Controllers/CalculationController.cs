@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Shared.Models;
+using Actuarial.Shared.Models;
 using System.Threading;
 
 namespace Actuarial.Server.Controllers

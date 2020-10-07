@@ -9,7 +9,6 @@
 </MatTabGroup>
 <MatCard @ref="NewCard">
     <MatCardContent>
-
     </MatCardContent>
 </MatCard>
 <MatFAB Icon="@MatIconNames.Add_circle" Label="New" OnClick="@OnClickNew" @ref="NewButton"></MatFAB>
@@ -18,6 +17,7 @@
 
     MatFAB NewButton;
     MatCard NewCard;
+    CalculationRequest CalculationRequest;
     void OnClickNew(MouseEventArgs e)
     {
         

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Shared.Domain;
+using Actuarial.Shared.Domain;
 
-namespace Shared.Models
+namespace Actuarial.Shared.Models
 {
     public class CalculationRequest
     {

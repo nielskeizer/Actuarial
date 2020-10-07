@@ -1,6 +1,6 @@
 using System;
 
-namespace Shared.Domain
+namespace Actuarial.Shared.Domain
 {
     public class Person
     {
